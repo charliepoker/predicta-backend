@@ -15,6 +15,8 @@ app.use(function (req, res, next) {
     process.env.FRONTEND_URI,
     "http:/localhost:3000/",
     "http://localhost:3000",
+    "https://predecta.netlify.app/",
+    "https://predecta.netlify.app"
   ];
   var origin = req.headers.origin;
 

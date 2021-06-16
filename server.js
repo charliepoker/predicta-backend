@@ -9,6 +9,9 @@ connectDB();
 
 const app = express();
 
+app.get("/", (req, res) => {
+  return res.send("Welcome to Predicta Api");
+});
 app.use(function (req, res, next) {
   var allowedOrigins = [
     process.env.FRONTEND_URI,
@@ -16,11 +19,13 @@ app.use(function (req, res, next) {
     "http://localhost:3000/",
     "http://localhost:3000",
     "https://predecta.netlify.app/",
-    "https://predecta.netlify.app"
+    "https://predecta.netlify.app",
+    "http://localhost:4000/"
   ];
   var origin = req.headers.origin;
 
-  if (allowedOrigins.includes(origin)) {
+
+  if (allowedOrigins.includes(origin) && origin) {
     res.setHeader("Access-Control-Allow-Origin", origin); // restrict it to the required domain
   }
   res.header(

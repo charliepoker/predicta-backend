@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
   var allowedOrigins = [
     process.env.FRONTEND_URI,
     process.env.FRONTEND_URI,
-    "http:/localhost:3000/",
+    "http://localhost:3000/",
     "http://localhost:3000",
     "https://predecta.netlify.app/",
     "https://predecta.netlify.app"
